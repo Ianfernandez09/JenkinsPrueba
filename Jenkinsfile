@@ -14,5 +14,18 @@ pipeline {
       }
     }
 
+    stage('Descargar imagen Odoo') {
+      steps {
+        ansiblePlaybook 'imagen.yml'
+      }
+    }
+
+    stage('Enviar compose e iniciar contenedor') {
+      steps {
+        sh 'ansible all -i hosts -m copy -a "src=docker-compose.yml dest=/tmp/docker-compose.yml"'
+        ansiblePlaybook 'iniciar_docker.yml'
+      }
+    }
+
   }
 }
