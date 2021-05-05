@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('Instalar Docker') {
+      steps {
+        ansiblePlaybook 'dependencias.yml'
+        sh 'ansible all -i hosts -a "sudo systemctl enable docker"'
+      }
+    }
+
   }
 }
