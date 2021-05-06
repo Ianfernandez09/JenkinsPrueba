@@ -1,0 +1,7 @@
+version: '2'
+services:
+  web:
+    image: httpd:latest
+    ports:
+      - "8080:8080"
+      - "443:8443"
