@@ -1,0 +1,5 @@
+- hosts: worker2
+  become: yes
+  tasks:
+    - name: Descargar imagen odoo
+      shell: docker pull odoo
