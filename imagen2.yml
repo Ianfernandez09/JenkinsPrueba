@@ -1,5 +1,5 @@
 - hosts: worker2
   become: yes
   tasks:
-    - name: Descargar imagen httpd
-      shell: docker pull httpd
+    - name: Descargar imagen nginx
+      shell: docker pull nginx
