@@ -15,19 +15,8 @@ pipeline {
     }
 
     stage('Descargar imagen Odoo') {
-      parallel {
-        stage('Descargar imagen Odoo') {
-          steps {
-            ansiblePlaybook 'imagen.yml'
-          }
-        }
-
-        stage('Descargar imagen apache2') {
-          steps {
-            ansiblePlaybook 'imagen2.yml'
-          }
-        }
-
+      steps {
+        ansiblePlaybook 'imagen.yml'
       }
     }
 
