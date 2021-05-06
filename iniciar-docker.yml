@@ -1,4 +1,4 @@
-- hosts: worker2
+- hosts: worker1
   become: yes
   tasks:
     - name: Iniciar Odoo
