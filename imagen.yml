@@ -1,4 +1,4 @@
-- hosts: worker1
+- hosts: worker2
   become: yes
   tasks:
     - name: Descargar imagen odoo
