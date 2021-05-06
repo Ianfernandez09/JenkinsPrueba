@@ -1,5 +1,5 @@
 - hosts: worker2
   become: yes
   tasks:
-    - name: Iniciar Nginx
+    - name: Iniciar apache
       shell: docker-compose -f /tmp/docker-compose2.yml up -d 
